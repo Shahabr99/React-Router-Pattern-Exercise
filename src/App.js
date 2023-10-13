@@ -1,9 +1,10 @@
-import './App.css';
+
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import axios from 'axios';
 import Nav from './Nav';
-import DogLinks from './DogLinks';
+import RouteList from './RouteList'
+
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       <BrowserRouter>
         <Nav dogs={dogs.data}/>
         <div>
-          <DogLinks />
+          <RouteList dogs={dogs.data} />
         </div>
       </BrowserRouter>
     </div>
